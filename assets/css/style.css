@@ -72,7 +72,7 @@ p {
 .name {
     font-size: 33px;
     font-family: Arial, Helvetica, sans-serif;
-    background: radial-gradient(circle at 10% 20%, rgb(255, 200, 124) 0%, rgb(252, 251, 121) 90%);
+    background: radial-gradient(circle at 10% 20%, rgb(254 124 255) 0%, rgb(121 252 167) 90%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
@@ -85,6 +85,6 @@ p {
     background: radial-gradient(circle at 10% 20%, rgb(124 137 255) 0%, rgb(252 177 121) 90%);
 }
 .page-footer {
-    background-color: rgb(38, 35, 35);
+    background-color: rgb(0,0,0);
     color: #c4c4c4;
 }

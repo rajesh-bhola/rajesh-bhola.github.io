@@ -82,7 +82,7 @@ p {
 }
 .bg-body1 {
     --mdb-bg-opacity: 1;
-    background: radial-gradient(circle at 10% 20%, rgb(255, 200, 124) 0%, rgb(252, 251, 121) 90%);
+    background: radial-gradient(circle at 10% 20%, rgb(124 137 255) 0%, rgb(252 177 121) 90%);
 }
 .page-footer {
     background-color: rgb(38, 35, 35);

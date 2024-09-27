@@ -1,90 +1,262 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: #f5f4f4;
-}
-
-.blockquote p {
-    padding: 1rem 0;
-    font-size: 1.1rem;
-}
-
-.font-weight-bold {
-    font-weight: 700 !important;
-}
-
-.mb-2,
-.my-2 {
-    margin-bottom: 0.5rem !important;
-}
-
-.ml-1,
-.mx-1 {
-    margin-left: 0.25rem !important;
-}
-
-p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-
-*,
-::after,
-::before {
     box-sizing: border-box;
 }
 
-.blockquote {
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
+html {
+    scroll-behavior: smooth;
 }
 
-.bq-warning {
-    border-left: 3px solid blue !important;
-    border-radius: 0.25rem;
+body {
+    font-family: lato;
+    background-color: #242424;
 }
 
-.blockquote {
-    padding: 0.5rem 1rem;
-    border-left: 0.25rem solid #eceeef;
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 280px;
+    background: linear-gradient(#004aad, #cb6ce6);
+    color: #fff
 }
 
-.blockquote {
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-    background: #ffffff;
+.header .nav-item {
+    font-weight: bold
 }
+
+.header .nav-item .nav-link {
+    color: rgba(255, 255, 255, 0.8)
+}
+
+.social-list a {
+    width: 32px;
+    height: 32px;
+    padding-top: 5px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+    background-color: #fff
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .social-list a {
+        transition: none
+    }
+}
+
+.social-list a:hover {
+    color: #cb6ce6;
+    background-color: rgba(255, 255, 255, 0.8)
+}
+
+.main-wrapper {
+    margin-left: 280px;
+}
+
+.footer {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: #171515;
+}
+
+
+.head {
+    color: #cb6ce6;
+}
+
+
+@media (max-width: 991.98px) {
+    .header {
+        display: none;
+    }
+
+    .header .navbar {
+        padding: 1rem
+    }
+
+    .main-wrapper {
+        margin-left: 0
+    }
+}
+
+
 
 .design2 {
     margin: 0px;
-    border-radius: 0.25rem;
-    background: #ffffff;
-    box-shadow: 0px 0px 10px #c4c4c4,
-        -0px -0px 0px #ffffff;
-}
-.display-6 {
-    font-size: 1.5rem;
-}
-.name {
-    font-size: 33px;
-    font-family: Arial, Helvetica, sans-serif;
-    background: radial-gradient(circle at 10% 20%, rgb(132 124 255) 0%, rgb(178 155 76 / 46%) 90%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    transition: transform 0.3s;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #004aad, #cb6ce6);
+    color: #f1f1f1;
 }
 
-.navbar {
-    --mdb-navbar-box-shadow: 0 4px 12px 0 rgb(95, 95, 93), 0 2px 4px rgb(0 0 0);
+.design2:hover {
+    transform: scale(1.02);
 }
-.bg-body1 {
-    --mdb-bg-opacity: 1;
-    background: radial-gradient(circle at 10% 20%, rgb(124 137 255) 0%, rgb(252 177 121) 90%);
+
+
+::selection {
+    background-color: #cb6ce6;
+    /* Different background for paragraphs */
+    color: white;
+    /* White text for selected paragraphs */
 }
-.page-footer {
-    background-color: rgb(0,0,0);
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Background of the scrollbar track */
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #cb6ce6;
+    /* Color of the scrollbar handle */
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #cb6ce6;
+    /* Darker color when hovered */
+}
+
+.btn {
+    margin-bottom: 15px;
+}
+
+
+.custom-gradient-primary {
+    background: linear-gradient(45deg, #004aad, #cb6ce6);
+    /* Primary gradient */
+    border: none;
+    color: white;
+}
+
+.custom-gradient-secondary {
+    background: linear-gradient(45deg, #004aad, #cb6ce6);
+    /* Secondary gradient */
+    border: none;
+    color: white;
+}
+
+/* Optional: Add hover effect */
+.custom-gradient-primary:hover {
+    background: linear-gradient(45deg, #004aad, #cb6ce6);
+}
+
+.custom-gradient-secondary:hover {
+    background: linear-gradient(45deg, #004aad, #cb6ce6);
+}
+
+/* Ensure buttons retain Bootstrap styling */
+.btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+}
+
+
+
+.card {
+    background-color: #ffffff;
+    /* Card background color */
+    border-radius: 8px;
+    /* Rounded corners */
+    border-width: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    overflow: hidden;
+    /* Ensures rounded corners */
+    transition: transform 0.3s;
+    /* Animation effect on hover */
+}
+
+.card:hover {
+    transform: scale(1.02);
+    /* Scale effect on hover */
+    background: linear-gradient(45deg, #004aad, #cb6ce6);
+    color: #ffffff;
+}
+
+.card-img {
+    width: 100%;
+    /* Full width */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.card-content {
+    padding: 16px;
+    /* Inner padding */
+}
+
+.card-title {
+    font-size: 1.5em;
+    /* Title size */
+    margin: 0;
+    /* Remove default margin */
+}
+
+.card-text {
+    color: #555;
+    /* Text color */
+    margin: 8px 0;
+    /* Spacing between text */
+}
+
+.card-button {
+    background: linear-gradient(45deg, #004aad, #cb6ce6);
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* Remove border */
+    border-radius: 4px;
+    /* Rounded corners for button */
+    padding: 5px 10px;
+    /* Padding for button */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s;
+    /* Smooth background transition */
+}
+
+.card-button:hover {
+    background: linear-gradient(45deg, #004aad, #cb6ce6);
+    /* Darker shade on hover */
+}
+
+.card-body-bg {
+    background-color: lavender;
+}
+
+a {
+    color: #cb6ce6;
+    text-decoration: underline;
+}
+
+.card-body-bg1 {
+    background-color: rgb(255, 255, 255);
+}
+
+.title-bg {
+    background: linear-gradient(45deg, #004aad, #cb6ce6);
+}
+
+p {
+    line-height: 2em;
+}
+
+.text {
     color: #c4c4c4;
 }

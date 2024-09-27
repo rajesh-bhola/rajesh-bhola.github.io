@@ -1,6 +1,0 @@
-This favicon was generated using the following font:
-
-- Font Title: Noto Serif Oriya
-- Font Author: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/oriya)
-- Font Source: https://fonts.gstatic.com/s/notoseriforiya/v4/MjQQmj56u-r69izk_LDqWN7w0cYByutv9qeWYrvLaxo7-3y-v039MF1j.ttf
-- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

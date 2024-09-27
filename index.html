@@ -1,510 +1,841 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajesh Bhola</title>
+  <meta name="description"
+    content="Jay Jagannath I’m Rajesh Bhola, a passionate and dedicated software Engineer specializing in Spring Boot, microservices, and web development. With a strong foundation in Java and hands-on experience in building robust and scalable applications, I thrive on solving complex problems and delivering high-quality solutions.">
+  <meta name="keywords"
+    content="Software Developer, Java Developer, Spring Boot Developer, Microservices, Web Development, Full Stack Developer, Backend Developer, Java, Spring Boot, Spring Data JPA, Hibernate, REST API, MySQL, H2 Database, Docker, Postman, Git, Problem-solving, Team Collaboration, Agile Methodologies, Code Quality, Software Engineering, Scalable Applications, CRUD Operations, Entity Lifecycle, Transaction Management, API Integration, Database Interaction, Code Reviews, Testing, Passionate Developer, Dedicated Software Engineer, Innovative Solutions, High-Quality Code, Robust Applications">
+  <meta name="author" content="Rajesh Bhola">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajesh Bhola</title>
-    <meta name="description" content="Jay Jagannath I’m Rajesh Bhola, a passionate and dedicated software Engineer specializing in Spring Boot, microservices, and web development. With a strong foundation in Java and hands-on experience in building robust and scalable applications, I thrive on solving complex problems and delivering high-quality solutions.">
-    <meta name="keywords" content="Software Developer, Java Developer, Spring Boot Developer, Microservices, Web Development, Full Stack Developer, Backend Developer, Java, Spring Boot, Spring Data JPA, Hibernate, REST API, MySQL, H2 Database, Docker, Postman, Git, Problem-solving, Team Collaboration, Agile Methodologies, Code Quality, Software Engineering, Scalable Applications, CRUD Operations, Entity Lifecycle, Transaction Management, API Integration, Database Interaction, Code Reviews, Testing, Passionate Developer, Dedicated Software Engineer, Innovative Solutions, High-Quality Code, Robust Applications">
-    <meta name="author" content="Rajesh Bhola">
-
-    <!-- Open Graph meta tags -->
-    <meta property="og:title" content="Rajesh Bhola - Software Engineer" />
-    <meta property="og:description" content="Jay Jagannath! I’m Rajesh Bhola, a passionate and dedicated software Engineer specializing in Java, Spring Boot, microservices, and web development." />
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/82930824?v=4" />
-    <meta property="og:url" content="https://rajeshbhola.github.io/" />
-    
-    <!-- Add the favicon -->
-    <link rel="icon" href="assets/images/rajesh.png" type="image/x-icon">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
-    <!-- Add this line to include Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/assets/images/favicon_io/site.webmanifest">
-
-    <!--Custom CSS-->
-    <link rel="stylesheet" href="assets/css/style.css">
-
+  <!-- Open Graph meta tags -->
+  <meta property="og:title" content="Rajesh Bhola - Software Engineer" />
+  <meta property="og:description"
+    content="Jay Jagannath! I’m Rajesh Bhola, a passionate and dedicated software Engineer specializing in Java, Spring Boot, microservices, and web development." />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/82930824?v=4" />
+  <meta property="og:url" content="https://rajeshbhola.github.io/" />
+  <!-- Add the favicon -->
+  <link rel="icon" href="assets/images/pic.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-    <header>
+  <header class="header text-center">
 
-        <style>
-            /* Height for devices larger than 576px */
-            @media (min-width: 992px) {
-                #intro {
-                    margin-top: -58.59px;
-                    height: 50vh !important;
-                }
-            }
-        </style>
+    <nav class="navbar navbar-expand-lg" aria-label="Mobile friendly menu">
+      <!-- Mobile toggle button -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg bg-body1 fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./assets/images/rajesh1.png" alt="Logo" height="60" class="rounded-circle">
-                </a>
-                <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarExample01"
-                    aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarExample01">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link" aria-current="page" href="#"><b>Home</b></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about-me"><b>AboutMe</b></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#experience"><b>Experience</b></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#education"><b>Education</b></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projects"><b>Projects</b></a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav d-flex flex-row">
-                        <!-- Icons -->
-                        <li class="nav-item me-3 me-lg-0">
-                            <a class="nav-link" href="" rel="nofollow" target="">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item me-3 me-lg-0">
-                            <a class="nav-link" href="" rel="nofollow" target="">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item me-3 me-lg-0">
-                            <a class="nav-link" href="https://github.com/rajeshbhola" rel="nofollow" target="">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Navbar -->
+      <!-- Navigation content (profile and menu) -->
+      <div id="navigation" class="collapse navbar-collapse flex-column text-center">
 
-        <!-- Background image -->
-        <div class="p-5 text-center bg-image" style="
-            background-image: url('./assets/images/2.jpg');
-            height: 400px;
-            margin-top: 58px;
-          ">
-            <div class="mask">
-                <div class="d-flex justify-content-center align-items-center h-100">
-                    <div class="text-white">
-                        <img src="https://avatars.githubusercontent.com/u/82930824?v=4"
-                                    class="rounded shadow-1-strong me-2" height="80" alt="" loading="lazy" />
-                        <h1 class="mb-3 fw-bold">Rajesh Bhola</h1>
-                        <h5 class="mb-3"><i>Software Engineer</i></h5><br>
-                        <a data-mdb-ripple-init class="btn btn-outline-light btn-lg" href="#!" role="button">Hire Me</a>
-                    </div>
-                </div>
-            </div>
+        <!-- Profile section -->
+        <div class="profile-section py-4">
+          <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/pic.png" alt="profile" width="150"
+            height="150">
+
+
+          <div class="bio mb-3 px-3">I am a software engineer with a passion for developing innovative applications and
+            solving complex problems efficiently. In addition to my outdoor interests, I enjoy playing cricket as a way
+            to stay active and fit.</div>
+
+          <!-- Social links -->
+          <ul class="social-list list-inline">
+            <li class="list-inline-item"><a href="https://x.com/therajeshbhola" target="_blank" aria-label="Twitter"><i
+                  class="fab fa-twitter fa-fw"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.linkedin.com/in/rajeshbhola1/" target="_blank"
+                aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-fw"></i></a>
+            </li>
+            <li class="list-inline-item"><a href="https://github.com/rajeshbhola?tab=repositories" target="_blank"
+                aria-label="Github"><i class="fab fa-github-alt fa-fw"></i></a>
+            </li>
+            <li class="list-inline-item"><a href="https://www.youtube.com/@bholarajesh" target="_blank"
+                aria-label="Youtube"><i class="fab fa-youtube fa-fw"></i></a>
+            </li>
+            <li class="list-inline-item"><a href="#" target="_blank" aria-label="Website"><i
+                  class="fa-solid fa-globe"></i></a>
+            </li>
+          </ul>
         </div>
-        <!-- /Background image -->
 
-    </header>
+        <!-- Menu items -->
+        <ul class="navbar-nav flex-column text-start">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="fas fa-user fa-fw me-2"></i>About Me</a>
+          </li>
+          <!-- Add more nav items as necessary -->
+        </ul>
+
+        <!-- Hire me button -->
+        <div class="my-2">
+          <a class="btn btn-warning" href="#" target="_blank" aria-label="bholacodecamp web">bholaCodeCamp</a>
+        </div>
+      </div>
+    </nav>
+
+  </header>
 
 
-    <!--Main layout-->
-    <main>
 
-        <!-- About container -->
-        <div class="container">
+  <div class="main-wrapper">
 
-            <!-- Section About -->
-            <section id="about-me" class="section feature-box mb-0 mt-0">
+    <!-- Profile Start -->
+    <section class="p-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <img class="img-fluid" src="assets/images/LinkedIn Banner.png" alt="profile_pic">
+          </div>
 
-                <!-- Section title -->
-                <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-delay="0.2s">About
-                    <strong>me</strong></h2>
+        </div>
+      </div>
+    </section>
+    <!-- Profile End -->
 
-                <p class="mb-2 display-6">
-                    I am the owner of <a href="https://rajeshbhola.github.io/bholacodecamp/index.html">bholaCodeCamp</a> website. This name was inspired by myself and also sometimes I did some crazy things and felt like I've never done before. I am a software Engineer by profession. I would love to solve problems and take the challeneges to complete the task within project deadlines.
+    <!-- About Start -->
+    <section class="p-3 mb-0">
+      <div class="container-fluid py-3">
+        <h2 class="display-7 fw-bold head">About Me</h2>
+        <blockquote class="blockquote m-lg-2 py-3 ps-4 px-lg-3">
+          <p class="mb-2 text">
+            As the founder of <a class="" href="#" target="_blank" aria-label="bholacodecamp web">bholaCodeCamp</a> and
+            <a class="" href="#" target="_blank" aria-label="bholacodecamp web">DevGuide</a>, my inspiration originates
+            from personal experiences and a passion for embracing challenges, even when they push me beyond my comfort
+            zone. I am a software engineer with a deep enthusiasm for problem-solving and a commitment to delivering
+            projects within tight deadlines.
+          </p>
+          <br>
+          <p class="mb-2 text">
+            With extensive experience in the tech industry, I am passionate about leveraging cutting-edge technologies
+            to craft innovative and scalable solutions. My focus is on understanding each client's unique requirements
+            and delivering high-quality, reliable results that exceed expectations. At bholaCodeCamp, I am dedicated to
+            providing solutions that not only meet current needs but are also future-ready.
+          </p>
+
+        </blockquote><br>
+
+        <div class="row features-big text-center wow fadeIn" data-wow-delay="0.4s">
+
+          <!-- First column -->
+          <div class="col-md-4 mb-5">
+
+            <!--Panel-->
+            <div class="card card-body">
+              <i class="fa-brands fa-blogger fa-3x mb-4" aria-hidden="true"></i>
+              <h5 class="font-weight-bold text-uppercase mb-4">Blogger</h5>
+              <p class="dark-grey-text">Writing programming related content on my website - bholaCodeCamp</p>
+            </div>
+            <!--/.Panel-->
+
+          </div>
+          <!-- /First column -->
+
+          <!-- Second column -->
+          <div class="col-md-4 mb-5">
+
+            <!--Panel-->
+            <div class="card card-body">
+              <i class="fa-solid fa-laptop-code fa-3x mb-4" aria-hidden="true"></i>
+              <h5 class="font-weight-bold text-uppercase mb-4">Developer</h5>
+              <p class="dark-grey-text">Developing web based applications using java and other languages.
+              </p>
+            </div>
+            <!--/.Panel-->
+
+          </div>
+          <!-- /.Second column -->
+
+          <!-- Third column -->
+          <div class="col-md-4 mb-5">
+
+            <!--Panel-->
+            <div class="card card-body">
+              <i class="fa-brands fa-youtube fa-3x mb-4"></i>
+              <h5 class="font-weight-bold text-uppercase mb-4">Youtuber</h5>
+              <p class="dark-grey-text">Making videos for the developer community to help and grow.
+              </p>
+            </div>
+            <!--/.Panel-->
+
+          </div>
+          <!-- /.Third column -->
+
+        </div>
+
+
+      </div>
+    </section>
+    <!-- About End -->
+
+    <!-- Education Start -->
+    <section class="p-3 mb-0">
+      <div class="container-fluid py-3">
+        <h2 class="display-7 fw-bold head">Education</h2><br>
+        <div class="row g-2">
+          <div class="col-md-6">
+            <div class="p-3 design2 mb-2">
+              <span>2016 - 2018</span>
+              <h3>Master Degree</h3>
+              <p>MPC Autonomous College, NOU.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-3 design2 mb-2">
+              <span>2013 - 2016</span>
+              <h3>Bachelor Degree</h3>
+              <p>Vasudha Institute, Utkal University.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-3 design2 mb-2">
+              <span>2011 - 2013</span>
+              <h3>Intermediate</h3>
+              <p>Godavarish Mahavidyalaya, CHSE Odisha.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-3 design2 mb-2">
+              <span>2010 - 2011</span>
+              <h3>High School</h3>
+              <p>Kharabela High School, BSE Odisha.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Education End -->
+
+    <!-- Experience Start -->
+    <section class="p-3 mb-0 bg-color design">
+      <div class="container-fluid py-3">
+        <h2 class="display-7 fw-bold head">Work Experience</h2><br>
+        <div class="row g-2">
+
+          <!--Project 1-->
+          <div class="col-md-12 mb-4">
+            <div class="card h-100 shadow-sm rounded">
+              <div class="card-header title-bg text-white">
+                <h5 class="card-title">Project 1: <span style="color:#ffc107;font-weight: bold;">Loyalty System</span>
+                  (Dec 2019 to Apr 2020) </h5>
+              </div>
+              <div class="card-body card-body-bg">
+                <h4 class="card-subtitle mb-2 text-muted">Description:</h4>
+                <p class="card-text">
+                  The Loyalty system consists of a loyalty portal and services. Services are REST-based and secured by
+                  OAuth 2.0.
+                  Integrated with the issuance system to keep track of points earned by consumers based on their
+                  purchases.
+                  Points are defined based on the amount of transactions. There is a provision to upload a product
+                  catalog to redeem each product for certain points.
                 </p>
                 <br>
-                <p class="mb-2 display-6">
-                    I am an experienced technology enthusiast and professional with a passion for coding and delivering innovative solutions. My expertise in related technologies allows me to understand and deliver on my clients' unique requirements. I pride myself on delivering high-quality, reliable, and scalable solutions that meet and exceed my clients' expectations.
-                </p><br><br>
-
-                <!-- First row -->
-                <div class="row features-big text-center wow fadeIn" data-wow-delay="0.4s">
-
-                    <!-- First column -->
-                    <div class="col-md-4 mb-5">
-
-                        <!--Panel-->
-                        <div class="card card-body hoverable">
-                            <i class="fas fa-laptop fa-3x mb-4" aria-hidden="true"></i>
-                            <h5 class="font-weight-bold text-uppercase mb-4">Blogger</h5>
-                            <p class="dark-grey-text">Writing programming related content on my website.</p>
-                        </div>
-                        <!--/.Panel-->
-
-                    </div>
-                    <!-- /First column -->
-
-                    <!-- Second column -->
-                    <div class="col-md-4 mb-5">
-
-                        <!--Panel-->
-                        <div class="card card-body yellow hoverable">
-                            <i class="fas fa-code fa-3x mb-4" aria-hidden="true"></i>
-                            <h5 class="font-weight-bold text-uppercase mb-4">Developer</h5>
-                            <p class="dark-grey-text">Developing web based applications using java and other languages.
-                            </p>
-                        </div>
-                        <!--/.Panel-->
-
-                    </div>
-                    <!-- /.Second column -->
-
-                    <!-- Third column -->
-                    <div class="col-md-4 mb-5">
-
-                        <!--Panel-->
-                        <div class="card card-body hoverable">
-                            <i class="fas fa-pencil-alt fa-3x mb-4" aria-hidden="true"></i>
-                            <h5 class="font-weight-bold text-uppercase mb-4">Youtuber</h5>
-                            <p class="dark-grey-text">Making videos for the developer community to help and grow.
-                            </p>
-                        </div>
-                        <!--/.Panel-->
-
-                    </div>
-                    <!-- /.Third column -->
-
-                </div>
-                <!-- /.First row -->
-
-            </section>
-            <!-- /.Second section -->
-
-        </div>
-        <!-- /About container -->
-
-        <!--Experience container-->
-        <div class="container-fluid" style="background: radial-gradient(circle at 10% 20%, rgb(132 124 255) 0%, rgb(178 155 76 / 46%) 90%);">
-            <div class="container py-4 pt-4">
-
-                <!-- Second section -->
-                <section id="experience">
-
-                    <!-- First row -->
-                    <div class="row py-5">
-
-                        <!--First column-->
-                        <div class="col-lg-6 col-md-12 mb-3 wow fadeIn" data-wow-delay="0.4s">
-
-                            <!--Section heading-->
-                            <div class="d-flex justify-content-start">
-                                <h4 class="text-center text-uppercase mb-5 pb-3 mt-4 wow fadeIn" data-wow-delay="0.2s">
-                                    My <strong>Work experience</strong></h4>
-                            </div>
-
-                            <!--Description-->
-                            <blockquote class="blockquote bq-warning mb-4">
-                                <div class="row">
-                                    <h5 class="font-weight-bold mb-3"><i class="fas fa-briefcase fa-1x mb-1 mr-3 ml-3" aria-hidden="true"></i>Software Engineer I</h5>
-                                </div>
-                                <p class="font-weight-bold ml-1 dark-grey-text mb-1">Nov, 2023 - Present</p>
-                                <p class="mb-0 ml-1 light-grey-text">Working on a courier service project using the latest java, springboot and microservices with cloud ci/cd pipeline.</p>
-                            </blockquote>
-
-                            <blockquote class="blockquote bq-warning mb-4">
-                                <div class="row">
-                                    <h5 class="font-weight-bold mb-3"><i class="fas fa-briefcase fa-1x mb-1 mr-3 ml-3" aria-hidden="true"></i>Software Engineer - Development</h5>
-                                </div>
-                                <p class="font-weight-bold ml-1 dark-grey-text mb-1">Apr, 2021 - Sep 2023</p>
-                                <p class="mb-0 ml-1 light-grey-text">Worked on the payment gateway project which is used ISO-8583 messaging for validating billions of transactions. </p>
-                            </blockquote>
-
-                            <blockquote class="blockquote bq-warning mt-1 mb-4">
-                                <div class="row">
-                                    <h5 class="font-weight-bold mb-3"><i class="fas fa-briefcase fa-1x mb-1 mr-3 ml-3" aria-hidden="true"></i>Junior Software Engineer</h5>
-                                </div>
-                                <p class="font-weight-bold ml-1 dark-grey-text mb-1">Apr 2020 - Mar 2021</p>
-                                <p class="mb-0 ml-1 light-grey-text">Worked on the pos machine project which is used for generating the bill and match with accquirer.  </p>
-                            </blockquote>
-
-                            <blockquote class="blockquote bq-warning">
-                                <div class="row">
-                                    <h5 class="font-weight-bold mb-3"><i class="fas fa-briefcase fa-1x mb-1 mr-3 ml-3" aria-hidden="true"></i>Trainee Software Engineer</h5>
-                                </div>
-                                <p class="font-weight-bold ml-1 dark-grey-text mb-1"><strong>Dec 2019 - Apr 2020</strong></p>
-                                <p class="mb-0 ml-1 light-grey-text">Worked on a bus ticket billing device for the client.</p>
-                            </blockquote>
-
-                        </div>
-                        <!--/First column-->
-
-                        <!--Second column-->
-                        <div class="col-lg-5 offset-lg-1 col-md-12 mb-4 wow fadeIn" data-wow-delay="0.4s">
-
-                            <!--Second heading-->
-                            <div class="d-flex justify-content-start">
-                                <h4 class="text-center text-uppercase mb-5 pb-3 mt-4 wow fadeIn" data-wow-delay="0.2s">
-                                    Development <strong>Skills</strong></h4>
-                            </div>
-
-                            <!--Description-->
-                            <p class="black-text font-weight-bold">HTML, CSS, JavaScript, Markdown</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <p class="black-text font-weight-bold pt-3">ReactJS, NodeJS</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <p class="black-text font-weight-bold pt-3">Java, Groovy, JDBC, Servlet, JSP </p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <p class="black-text font-weight-bold pt-3">Spring, SpringBoot, Microservices, Grails</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 45%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <p class="black-text font-weight-bold pt-3">JPA, Hibernate</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 53%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <p class="black-text font-weight-bold pt-3">Apache Kafka, RabbitMQ</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 53%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <p class="black-text font-weight-bold pt-3">Git, Docker, Kubernetes, AWS</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 53%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <p class="black-text font-weight-bold pt-3">Grafana, Splunk, ELK</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 53%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <p class="black-text font-weight-bold pt-3">GitHub, GitLab, BitBucket</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 53%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <p class="black-text font-weight-bold pt-3">MySQL, PostgreSQL,mongoDB, Cassandra, ksqlDB</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 53%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <p class="black-text font-weight-bold pt-3">JUnit, Mockito, Postman, JMeter</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 53%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <p class="black-text font-weight-bold pt-3">Jira, Confluence</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 53%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <p class="black-text font-weight-bold pt-3">Eclipse, STS 4, Intellij Idea, VS Code, PyCharm, Android Studio</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 53%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <p class="black-text font-weight-bold pt-3">Windows, Linux, Bash, CMD</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 53%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <p class="black-text font-weight-bold pt-3">Skype, Microsoft Teams, Slack</p>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 53%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                        </div>
-                        <!--/Second column-->
-
-                    </div>
-                    <!--/First row-->
-
-                </section>
-                <!-- /.Second section -->
+                <h4 class="card-subtitle mb-2 text-muted">APIs & Redemption:</h4>
+                <p class="card-text">
+                  APIs are available to redeem points. Once a consumer accumulates certain points, they can view the
+                  product catalog to redeem them.
+                  Redemption of points is done by the consumer from the consumer portal, which requests the product
+                  catalog using the loyalty APIs.
+                </p>
+                <br>
+                <h4 class="card-subtitle mb-2 text-muted">Roles:</h4>
+                <p class="card-text">
+                  Trainee Software Engineer - Development
+                </p>
+                <br>
+                <h4 class="card-subtitle mb-2 text-muted">Responsibilities:</h4>
+                <ul class="card-text">
+                  <li>Involved in project flow and discussions.</li>
+                  <li>Understand SRS documents and analyze project architecture.</li>
+                  <li>Designing the format of the JSP pages.</li>
+                  <li>Develop and implement REST API for use cases.</li>
+                  <li>Implementation of sending email and SMS notifications.</li>
+                  <li>Writing and executing unit test cases and coverage.</li>
+                </ul>
+                <br>
+                <h4 class="card-subtitle mb-2 text-muted">Technologies Used:</h4>
+                <p class="card-text">
+                  Java, Spring MVC, Maven, Spring Boot, Microservices, REST API, Hibernate, Oracle, Tomcat server.
+                </p>
+              </div>
 
             </div>
-        </div>
-        <!--/Experience container-->
+          </div>
 
-        <!-- Education Start -->
-        <section id="education" class="p-3 mb-0 bg-color design">
-            <div class="container-fluid py-3">
-                <h2 class="display-7 fw-bold head">Education</h2><br>
-                <div class="row g-2">
-                    <div class="col-md-6">
-                        <div class="p-3 border bg-color1 design2 mb-2">
-                            <span>2016 - 2018</span>
-                            <h3>Master Degree</h3>
-                            <p>MPC Autonomous College, North Odisha Universitiy.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="p-3 border bg-color1 design2 mb-2">
-                            <span>2013 - 2016</span>
-                            <h3>Bachelor Degree</h3>
-                            <p>Vasudha Institute, Utkal University.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="p-3 border bg-color1 design2 mb-2">
-                            <span>2011 - 2013</span>
-                            <h3>Intermediate</h3>
-                            <p>Godavarish Mahavidyalaya, CHSE Odisha.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="p-3 border bg-color1 design2 mb-2">
-                            <span>2010 - 2011</span>
-                            <h3>High School</h3>
-                            <p>Kharabela High School, BSE Odisha.</p>
-                        </div>
-                    </div>
-                </div>
+          <!--Project 2-->
+          <div class="col-md-12 mb-4">
+            <div class="card h-100 shadow-sm rounded">
+              <div class="card-header title-bg text-white">
+                <h5 class="card-title">Project 2: <span style="color:#ffc107;font-weight: bold;">Payment Gateway</span>
+                  (May 2020 to Mar 2022) </h5>
+              </div>
+              <div class="card-body card-body-bg">
+                <h4 class="card-subtitle mb-2 text-muted">Description:</h4>
+                <p class="card-text">
+                  Payment Gateway and Acquiring solution provides a feature-rich,
+                  flexible, scalable option to merchants, banks, and service providers
+                  for effectively capturing and processing customer transactions from
+                  multiple channels.
+                </p>
+                <br>
+                <p class="card-text">
+                  Some of the key features that Chatak PG provides:
+                </p>
+                <ul class="card-text">
+                  <li>Transactional support – Sale, Auth, Refund, Reversal, Batch
+                    Settlement, Reconciliation.</li>
+                  <li>Acceptance of all standard payment scheme card types.</li>
+                  <li>Tokenization so as not to store any customer
+                    sensitive information.</li>
+                  <li>Multiple connectors- upstream processing through many
+                    processors.</li>
+                  <li>Merchant and Terminal Management.</li>
+                </ul>
+                <br>
+                <h4 class="card-subtitle mb-2 text-muted">Roles:</h4>
+                <p class="card-text">
+                  Junior Software Engineer - Development
+                </p>
+                <br>
+                <h4 class="card-subtitle mb-2 text-muted">Responsibilities:</h4>
+                <ul class="card-text">
+                  <li>Requirement Analysis & Implementation.</li>
+                  <li>Developing the Payment APIs.</li>
+                  <li>Identifying end-to-end scenarios for the payment process.</li>
+                  <li>Implementing generic methods for the framework.</li>
+                  <li>Follow/Improve the efficiency of the code.</li>
+                  <li>SonarQube fixes.</li>
+                  <li>Junit test cases writing.</li>
+                </ul>
+                <br>
+                <h4 class="card-subtitle mb-2 text-muted">Technologies Used:</h4>
+                <p class="card-text">
+                  Java, Maven, SpringBoot, Microservices, REST Web services, Hibernate, MySQL, Tomcat server
+                </p>
+              </div>
+
             </div>
-        </section>
-        <!-- Education End -->
-        <br><br>
+          </div>
+
+          <!--Project 3-->
+          <div class="col-md-12 mb-4">
+            <div class="card h-100 shadow-sm rounded">
+              <div class="card-header title-bg text-white">
+                <h5 class="card-title">Project 3: <span style="color:#ffc107;font-weight: bold;">GreenBox-eCom2</span>
+                  (Apr 2022 to Sept 2023) </h5>
+              </div>
+              <div class="card-body card-body-bg">
+                <h4 class="card-subtitle mb-2 text-muted">Description:</h4>
+                <p class="card-text">
+                  The GreenBox eCom2 project consists of a transaction
+                  rest API and services.
+                </p>
+                <br>
+                <ul class="card-text">
+                  <li>The eCom2 is easily integrated with other products to keep
+                    track billing reports by the consumers based on their requests.
+                  </li>
+                  <li>EMEA (Europe, Middle East, and Africa), for transaction
+                    analytics in the portal for all POS, eCom, and other
+                    channels that cover APM transactions such as PayPal, Klarna,
+                    etc.
+                  </li>
+                  <li>Snowflake for transaction analytics for transaction webhooks.
+                  </li>
+                </ul>
+                <br>
+                <p class="card-text">
+                  The system supports multiple entities that encompass
+                  PDSP Transaction Consumer Service, Event Service,
+                  and Entity Services.
+                </p>
+                <br>
+                <h4 class="card-subtitle mb-2 text-muted">Roles:</h4>
+                <p class="card-text">
+                  Software Engineer – Development
+                </p>
+                <br>
+                <h4 class="card-subtitle mb-2 text-muted">Responsibilities:</h4>
+                <ul class="card-text">
+                  <li>Involved in discussions on requirements and clarifications.</li>
+                  <li>Technical design of Requirement. </li>
+                  <li>Development of Kafka producer and consumer applications.</li>
+                  <li>Implementation of REST APIs.</li>
+                  <li>Develop and implement streams and tasks and generate
+                    billing reports.</li>
+                  <li>Create data pipelines from microservices to Kafka to
+                    Snowflake data warehouse.</li>
+                  <li>Helping with the code review of teams.</li>
+                </ul>
+                <br>
+                <h4 class="card-subtitle mb-2 text-muted">Technologies Used:</h4>
+                <p class="card-text">
+                  SpringBoot, Kafka, REST Web services, Hibernate, PostgreSQL,
+                  Tomcat, Snowflake, ksqlDB
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!--Project 4-->
+          <div class="col-md-12 mb-4">
+            <div class="card h-100 shadow-sm rounded">
+              <div class="card-header title-bg text-white">
+                <h5 class="card-title">Project 4: <span style="color:#ffc107;font-weight: bold;">DRO</span> (Nov 2023 to
+                  Apr 2024) </h5>
+              </div>
+              <div class="card-body card-body-bg">
+                <h4 class="card-subtitle mb-2 text-muted">Description:</h4>
+                <p class="card-text">
+                  The DRO (Delivery Reverse Orders) project is a tracking project for orders created in SAP from store
+                  to warehouse.
+                </p>
+                <p class="card-text">
+                  The DRO project is a migration project. It migrate from older version to newer version and also
+                  replacing functionalities for communication asynchronously.
+                </p>
+                <br>
+                <ul class="card-text">
+                  <li>This project is migrating from java 8 version to java 17 version.
+                  </li>
+                  <li>Also used some third party dependencies and parent depenedncies.
+                  </li>
+                  <li>Replacing java and also RabbitMQ to kafka for asynchronous communication and some other
+                    functionalities.
+                  </li>
+                </ul>
+                <p class="card-text">
+                  The DRO project has 100+ of services which were safely migrated to newer technologies.
+                </p>
+                <br>
+                <h4 class="card-subtitle mb-2 text-muted">Roles:</h4>
+                <p class="card-text">
+                  Software Engineer I
+                </p>
+                <br>
+                <h4 class="card-subtitle mb-2 text-muted">Responsibilities:</h4>
+                <ul class="card-text">
+                  <li>Involved in discussions on requirements and clarifications.</li>
+                  <li>Creating the architectural diagram for the services. </li>
+                  <li>Removing RabbitMQ functionalities.</li>
+                  <li>Developing kafka instead of RabbitMQ and also handle error using retry error handling mechanism.
+                  </li>
+                  <li>Adding dependencies which are required.</li>
+                  <li>Changing the latest versions for third party dependencies.</li>
+                  <li>Deploying to dev environment and checking pod logs for production issues</li>
+                  <li>Creating SIS plan report for deployment of services.</li>
+                  <li>Changing feature flags in configs</li>
+                  <li>Pointing to TKE endpoint instead of PCF.</li>
+                </ul>
+                <br>
+                <h4 class="card-subtitle mb-2 text-muted">Technologies Used:</h4>
+                <p class="card-text">
+                  SpringBoot, Kafka, REST API, Cassandra, Splunk,
+                  Tomcat, Docker, Kubernetes
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!--Project 5-->
+          <div class="col-md-12 mb-4">
+            <div class="card h-100 shadow-sm rounded">
+              <div class="card-header title-bg text-white">
+                <h5 class="card-title">* Project 5: <span style="color:#ffc107;font-weight: bold;">QVXP</span> (Apr 2024
+                  to Present) </h5>
+              </div>
+              <div class="card-body card-body-bg">
+                <h4 class="card-subtitle mb-2 text-muted">Description:</h4>
+                <p class="card-text">
+                  The GreenBox eCom2 project consists of a transaction
+                  rest API and services.
+                </p>
+                <br>
+                <ul class="card-text">
+                  <li>The eCom2 is easily integrated with other products to keep
+                    track billing reports by the consumers based on their requests.
+                  </li>
+                  <li>EMEA (Europe, Middle East, and Africa), for transaction
+                    analytics in the portal for all POS, eCom, and other
+                    channels that cover APM transactions such as PayPal, Klarna,
+                    etc.
+                  </li>
+                  <li>Snowflake for transaction analytics for transaction webhooks.
+                  </li>
+                </ul>
+                <br>
+                <p class="card-text">
+                  The system supports multiple entities that encompass
+                  PDSP Transaction Consumer Service, Event Service,
+                  and Entity Services.
+                </p>
+                <br>
+                <h4 class="card-subtitle mb-2 text-muted">Roles:</h4>
+                <p class="card-text">
+                  Software Engineer – Development
+                </p>
+                <br>
+                <h4 class="card-subtitle mb-2 text-muted">Responsibilities:</h4>
+                <ul class="card-text">
+                  <li>Involved in discussions on requirements and clarifications.</li>
+                  <li>Technical design of Requirement. </li>
+                  <li>Development of Kafka producer and consumer applications.</li>
+                  <li>Implementation of REST APIs.</li>
+                  <li>Develop and implement streams and tasks and generate
+                    billing reports.</li>
+                  <li>Create data pipelines from microservices to Kafka to
+                    Snowflake data warehouse.</li>
+                  <li>Helping with the code review of teams.</li>
+                </ul>
+                <br>
+                <h4 class="card-subtitle mb-2 text-muted">Technologies Used:</h4>
+                <p class="card-text">
+                  SpringBoot, Kafka, REST Web services, Hibernate, PostgreSQL,
+                  Tomcat, Snowflake, ksqlDB
+                </p>
+              </div>
+
+            </div>
+          </div>
 
 
-        <!-- Projects Start -->
-        <section id="projects" class="p-3 mb-0 bg-color design" style="background: radial-gradient(circle at 10% 20%, rgb(132 124 255) 0%, rgb(178 155 76 / 46%) 90%);">
-            <div class="container-fluid py-3">
-                <h2 class="display-7 fw-bold head">Projects</h2><br />
-               
-        <!--1st row start-->
+        </div>
+      </div>
+    </section>
+    <!-- Experience End -->
+
+    <!-- Skills Start -->
+    <section class="p-3 mb-0 bg-color design">
+      <div class="container-fluid py-3">
+        <h2 class="display-7 fw-bold head">Development Skills & Tools</h2><br />
+
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-primary btn-lg custom-gradient-primary">Core Java</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">HTML</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-primary btn-lg custom-gradient-primary">CSS</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">JavaScript</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-primary btn-lg custom-gradient-primary">Markdown</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Angular JS</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-primary btn-lg custom-gradient-primary">Groovy</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">JDBC</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Servlet</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">JSP</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">GSP</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Grails</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Spring</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Spring MVC</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">SpringBoot</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Microservices</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Spring Data JPA</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Hibernate</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Apache Kafka</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Git</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Docker</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Kubernetes</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">AWS</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Azure</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Grafana</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Splunk</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">ELK</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">GitHub</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">GitLab</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">BitBucket</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">MySQL</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">PostgreSQL</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">mongoDB</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Cassandra</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">ksqlDB</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">JUnit</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Mockito</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Postman</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">JMeter</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Jira</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Confluence</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Eclipse</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">STS 4</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Intellij Idea</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">VS Code</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">PyCharm</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Android Studio</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Jupyter</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Windows</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Linux</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Bash</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">CMD</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Skype</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Microsoft Teams</button>
+        </a>
+        <a href="#" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg custom-gradient-secondary ">Slack</button>
+        </a>
+
+      </div>
+    </section>
+    <!-- Skills End -->
+
+    <!-- Projects Start -->
+    <section class="p-3 bg-color design">
+      <div class="container-fluid py-3">
+        <!-- Section Header -->
+        <h2 class="display-7 fw-bold head mb-4">Personal Projects</h2>
+
+        <!-- Row for Cards -->
         <div class="row">
 
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
-              <a href="java-introduction-questions.html">
-                <div class="card card-home">
-                    <div class="card-body">
-                        <a href="#"><img src="./assets/images/html-tag-search.png" class="img-fluid" alt="..."></a>
-                    </div>
-                </div>
-              </a>
-            </div>
-              
-
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
-                <a href="#">
-                  <div class="card card-home">
-                      <div class="card-body">
-                        <a href="https://rajeshbhola.github.io/tic-tac-toe/"><img src="./assets/images/tic-tac-toe.png" class="img-fluid" alt="..."></a>
-                      </div>
+          <!-- First Card -->
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <img src="assets/images/Tic-tac-toe.png" class="card-img-top" alt="Project">
+              <div class="card-body card-body-bg1">
+                <h5 class="card-title text-black">Tic-Tac-Toe</h5>
+                <p class="card-text">
+                  This is an online tic tac toe game. You can play with your phone instead of drawn to a paper.
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <!-- Flex container for alignment -->
+                  <p class="card-text mb-0">
+                    <small class="text-muted">Free</small>
+                  </p>
+                  <div class="btn-group" aria-label="Basic example">
+                    <a target="_blank" href="https://rajeshbhola.github.io/tic-tac-toe/"
+                      class="btn card-button">Preview</a>
+                    <a href="https://github.com/rajeshbhola/tic-tac-toe" target="_blank" aria-label="Github"
+                      class="btn card-button">
+                      <i class="fab fa-github-alt fa-fw"></i> GitHub
+                    </a>
                   </div>
-                </a>
-              </div>
-
-              <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
-                <a href="#">
-                  <div class="card card-home">
-                      <div class="card-body">
-                        <a href="#"><img src="./assets/images/html-tag-styler.png" class="img-fluid" alt="..."></a>
-                      </div>
-                  </div>
-                </a>
-              </div>
-
-        </div>
-        <!--1st row end-->
-                  
-
-                <br>
 
 
-            </div>
-        </section>
-        <!-- Projects End -->
 
-    </main>
-    <!--/Main layout-->
-
-    <!--Footer-->
-    <footer class="page-footer text-center text-md-left mt-0">
-        <!--Footer Links-->
-        <div class="container mb-2">
-            <!--First row-->
-            <div class="row">
-                <!--First column-->
-                <div class="col-md-12 my-4 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="footer-socials mt-1 text-center">
-                        <!--Twitter-->
-                        <a type="button" class="btn-floating btn-secondary"><i class="fab fa-linkedin"></i></a>
-                        <!--Youtube-->
-                        <a type="button" class="btn-floating btn-secondary"><i class="fab  fa-youtube"></i></a>
-                        <!--GitHub-->
-                        <a type="button" href="https://github.com/rajeshbhola" class="btn-floating btn-secondary"><i class="fab fa-github"></i></a>
-                    </div>
                 </div>
-                <!--/First column-->
+              </div>
             </div>
-            <!--/First row-->
-        </div>
-        <!--/Footer Links-->
-        <!--Copyright-->
-        <div class="footer-copyright py-3 text-center">
-            <div class="container-fluid">
-                © 2024 Copyright: <a href="index.html" target=""> RajeshBhola
-                </a>
+          </div>
+
+          <!-- 2nd Card -->
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <img src="assets/images/To-do-list.png" class="card-img-top" alt="Project ">
+              <div class="card-body card-body-bg1">
+                <h5 class="card-title text-black">To-Do-List</h5>
+                <p class="card-text">
+                  This is a simple to do list where you cand add tasks and delete them. Basically developed in an
+                  angular way.
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <!-- Flex container for alignment -->
+                  <p class="card-text mb-0">
+                    <small class="text-muted">Free</small>
+                  </p>
+                  <div class="btn-group" aria-label="Basic example">
+                    <a target="_blank" href="https://rajeshbhola.github.io/angular-to-do-list/"
+                      class="btn card-button">Preview</a>
+                    <a href="https://github.com/rajeshbhola/angular-to-do-list" target="_blank" aria-label="Github"
+                      class="btn card-button">
+                      <i class="fab fa-github-alt fa-fw"></i> GitHub
+                    </a>
+                  </div>
+
+                </div>
+              </div>
             </div>
-        </div>
-        <!--/Copyright-->
-    </footer>
-    <!--/Footer-->
+          </div>
 
 
-    <!-- MDB -->
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"></script>
-    <!--Bundle JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!--Custom JS-->
-    <script type="text/javascript" src="script.js"></script>
+          <!-- 3rd Card -->
+          <div class="col-md-6 mb-4" style="display: none;">
+            <div class="card h-100">
+              <img src="assets/images/Untitled design.png" class="card-img-top" alt="Project ">
+              <div class="card-body card-body-bg1">
+                <h5 class="card-title text-black">Project Title 1</h5>
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural lead-in to additional content. This
+                  content is a little bit longer.
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <!-- Flex container for alignment -->
+                  <p class="card-text mb-0">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                  <div class="btn-group" aria-label="Basic example">
+                    <a href="#" class="btn card-button">Preview</a>
+                    <a href="https://github.com/rajeshbhola?tab=repositories" target="_blank" aria-label="Github"
+                      class="btn card-button">
+                      <i class="fab fa-github-alt fa-fw"></i> GitHub
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- 4th Card -->
+          <div class="col-md-6 mb-4" style="display: none;">
+            <div class="card h-100">
+              <img src="assets/images/Untitled design.png" class="card-img-top" alt="Project ">
+              <div class="card-body card-body-bg1">
+                <h5 class="card-title text-black">Project Title 1</h5>
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural lead-in to additional content. This
+                  content is a little bit longer.
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <!-- Flex container for alignment -->
+                  <p class="card-text mb-0">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                  <div class="btn-group" aria-label="Basic example">
+                    <a href="#" class="btn card-button">Preview</a>
+                    <a href="https://github.com/rajeshbhola?tab=repositories" target="_blank" aria-label="Github"
+                      class="btn card-button">
+                      <i class="fab fa-github-alt fa-fw"></i> GitHub
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Add cards below-->
+
+
+
+        </div>
+
+      </div>
+    </section>
+    <!-- Projects End -->
+
+  </div>
+
+  <footer class="footer text-center py-3 theme-bg-dark">
+    <small class="copyright">&copy; Copyright Reserved by <span
+        style="color:rgb(228, 172, 30); font-weight: bold;">Rajesh Bhola</span> | <a href="#"
+        target="_blank">bholaCodeCamp</a> | <a href="#" target="_blank">DevGuide</a> | 2024 - 2025</small>
+  </footer>
+
+
 </body>
 
 </html>

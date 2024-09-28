@@ -278,3 +278,26 @@ p {
   .back-to-top:hover {
     background-color: #cb6ce6;
   }
+
+.nav-bg {
+    background-color: #cb6ce6;
+    color: rgb(255, 255, 255);
+}
+.nav-bg1 {
+    background-color: #cb6ce6;
+    color: rgb(255, 255, 255);
+    display: block;
+}
+.nav-link.btn-warning {
+    background-color: #004aad !important; /* Force the background to be warning color */
+}
+.nav-link.btn-info {
+    background-color: #2d2e2e !important; /* Force the background to be warning color */
+}
+  
+/* On large screens (above 992px), hide the navigation */
+@media (min-width: 992px) {
+    .nav-bg1 {
+      display: none;
+    }
+}

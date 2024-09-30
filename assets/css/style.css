@@ -158,7 +158,6 @@ body {
 /* Ensure buttons retain Bootstrap styling */
 .btn {
     padding: 0.75rem 1.25rem;
-    font-size: 1.25rem;
     border-radius: 0.3rem;
     margin-bottom: 15px;
 }
@@ -296,7 +295,10 @@ p {
 }
 .small-pic {
     display: none;
-} 
+}
+.bio {
+    display: none;
+}
 /* On large screens (above 992px), hide the navigation */
 @media (min-width: 992px) {
     .nav-bg1 {
@@ -308,5 +310,11 @@ p {
         display: block;
         width: 150px;
         height: 150px;
+    }
+    .banner-pic {
+        display: none;
+    }
+    .bio {
+        display: block;
     }
 }

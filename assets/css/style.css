@@ -11,6 +11,8 @@ html {
 body {
     font-family: lato;
     background-color: #242424;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 10px 10px;
 }
 
 .header {
@@ -88,7 +90,7 @@ body {
     margin: 0px;
     transition: transform 0.3s;
     border-radius: 8px;
-    background: linear-gradient(45deg, #004aad, #cb6ce6);
+    
     color: #f1f1f1;
 }
 
@@ -133,14 +135,14 @@ body {
 
 
 .custom-gradient-primary {
-    background: linear-gradient(45deg, #004aad, #cb6ce6);
+    background: linear-gradient(45deg, #004aad, #004aad);
     /* Primary gradient */
     border: none;
     color: white;
 }
 
 .custom-gradient-secondary {
-    background: linear-gradient(45deg, #004aad, #cb6ce6);
+    background: linear-gradient(45deg, #cb6ce6, #cb6ce6);
     /* Secondary gradient */
     border: none;
     color: white;
@@ -148,11 +150,11 @@ body {
 
 /* Optional: Add hover effect */
 .custom-gradient-primary:hover {
-    background: linear-gradient(45deg, #004aad, #cb6ce6);
+    background: linear-gradient(45deg, #cb6ce6, #cb6ce6);
 }
 
 .custom-gradient-secondary:hover {
-    background: linear-gradient(45deg, #004aad, #cb6ce6);
+    background: linear-gradient(45deg, #004aad, #004aad);
 }
 
 /* Ensure buttons retain Bootstrap styling */

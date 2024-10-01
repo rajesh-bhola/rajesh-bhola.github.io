@@ -302,6 +302,9 @@ p {
 .bio {
     display: none;
 }
+.banner-pic {
+    border-radius: 5px;
+}
 /* On large screens (above 992px), hide the navigation */
 @media (min-width: 992px) {
     .nav-bg1 {

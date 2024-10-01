@@ -214,11 +214,12 @@ body {
 }
 
 .card-button {
-    background: linear-gradient(45deg, #004aad, #cb6ce6);
+    background: linear-gradient(45deg, #004aad, #004aad);
     /* Button background color */
     color: white;
     /* Button text color */
     border: none;
+    margin-right: 4px;
     /* Remove border */
     border-radius: 4px;
     /* Rounded corners for button */
@@ -231,7 +232,7 @@ body {
 }
 
 .card-button:hover {
-    background: linear-gradient(45deg, #004aad, #cb6ce6);
+    background: linear-gradient(45deg, #cb6ce6, #cb6ce6);
     /* Darker shade on hover */
 }
 
